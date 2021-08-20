@@ -1,7 +1,7 @@
 {
-  "name": "relative-time",
-  "version": "0.0.1",
-  "description": "绝对时间转换",
+  "name": "relative-time-convert",
+  "version": "1.0.0",
+  "description": "A gadget that converts time into relative time",
   "main": "./src/index.ts",
   "scripts": {
     "build": "webpack",
@@ -10,9 +10,10 @@
   "keywords": [
     "TypeScript",
     "relative-time",
-    "relativeTime"
+    "relativeTime",
+    "relative-time-convert"
   ],
-  "author": "Miliky",
+  "author": "Miliky<miliky0906@foxmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.0",
