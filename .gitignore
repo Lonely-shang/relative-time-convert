@@ -1,0 +1,20 @@
+# compiled output
+/dist
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+
+# IDE - VSCode
+.vscode/*
+
+# log
+npm-debug.log
+yarn-error.log
+testem.log
+
+# *-lock
+yarn.lock
+package-lock.json

@@ -1,0 +1,32 @@
+{
+  "name": "relative-time",
+  "version": "0.0.1",
+  "description": "绝对时间转换",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "relative-time",
+    "relativeTime"
+  ],
+  "author": "Miliky",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.51.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "core-js": "^3.16.2",
+    "date-fns": "^2.23.0"
+  }
+}
