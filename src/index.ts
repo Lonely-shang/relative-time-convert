@@ -11,14 +11,16 @@ type Num = 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
  * @returns 返回相对时间
  */
 export default function relativeTime(
-  value: number | Date,
+  value: number | Date | string,
   limit: number = 94694400,
-  compareDate?: string | number | Date,
+  compareDate?: number | string,
   weekStartsOn: Num = 1,
 ) {
   if (!value) return '';
 
-  const computedDate = new ComputedDate(value, weekStartsOn, compareDate);
+  let _value = typeof value === 'number' ? value : new Date(value.toString().replace(/-/g, '/')).getTime();
+
+  const computedDate = new ComputedDate(_value, weekStartsOn, compareDate);
 
   const threshold = {
     month: 3, // at least 3 months using year.
@@ -32,7 +34,7 @@ export default function relativeTime(
    *  相差时间大于最大限制的时间戳，超过这个时间戳就返回绝对时间
    */
   if (computedDate.absDiffSeconds() > limit) {
-    return new Date(value);
+    return new Date(value as number);
   }
   if (computedDate.absDiffYears() > 0 && computedDate.absDiffMonths() > threshold.month) {
     return computedDate.diffYears() > 0 ? relativeTimeText.yearsAgo(computedDate.absDiffYears()) : relativeTimeText.yearsLater(computedDate.absDiffYears());

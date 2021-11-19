@@ -36,7 +36,7 @@ export default class ComputedDate implements IComputedDate{
   private value: number | Date;
   private weekStartsOn: Num;
 
-  constructor(value: number | Date, weekStartsOn: Num = 1, compareDate?: string | number | Date){
+  constructor(value: number | Date, weekStartsOn: Num = 1, compareDate?: string | number ){
     this.value = value;
     this.weekStartsOn = weekStartsOn;
     this.now = compareDate ? new Date(compareDate) : Date.now();
