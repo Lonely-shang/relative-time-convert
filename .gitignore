@@ -1,5 +1,9 @@
 # compiled output
 /dist
+dist/*
+
+index.js
+index.d.ts
 
 # dependencies
 /node_modules
@@ -18,3 +22,5 @@ testem.log
 # *-lock
 yarn.lock
 package-lock.json
+
+.npmignore

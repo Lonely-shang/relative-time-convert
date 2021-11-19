@@ -1,3 +1,4 @@
-import relativeTime from './src/index'
+
+import relativeTime from './dist/index'
 
 export default relativeTime;
