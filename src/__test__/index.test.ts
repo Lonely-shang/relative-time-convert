@@ -1,3 +1,12 @@
+/*
+ * @Author: Eliauk
+ * @Date: 2021-11-19 15:12:28
+ * @LastEditTime: 2021-11-24 17:04:49
+ * @LastEditors: Eliauk
+ * @Description: 
+ * @FilePath: /relative-time-convert/src/__test__/index.test.ts
+ * 一行代码一行诗，一个系统一座城。（talk is cheap,show me the code）
+ */
 
 import relativeTime from '../index'
 
@@ -28,11 +37,11 @@ describe('测试日时间转换', () => {
 
 describe('测试周时间转换', () => {
   test('>7天生成下周', () => {
-    expect(relativeTime(`${year}-${month}-${day + 8}`)).toBe('下周')
+    expect(relativeTime(`${year}-${month}-${day + 7}`)).toBe('下周')
   })
 
   test('>14天生成几周前/后', () => {
-    expect(relativeTime(`${year}-${month}-${day - 16}`)).toBe('2周前')
+    expect(relativeTime(`${year}-${month}-${day - 14}`)).toBe('2周前')
   })
 })
 
