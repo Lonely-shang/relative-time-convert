@@ -1,8 +1,8 @@
 {
   "name": "relative-time-convert",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A gadget that converts time into relative time",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"
