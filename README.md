@@ -1,6 +1,10 @@
-
 # relative-time-convert
 人性化时间转换
+
+```javascript
+  import relativeTime from 'relative-time-convert'
+  let count = relativeTime(new Date('2021/11/11'))
+```
 
 转换规则
 ```text
@@ -14,9 +18,9 @@
 接受limit参数，当时间相差的秒数超过limit时，不做转换
 ```
 
-|       参数       |                  说明                  |              类型             |   默认值   |
+|       参数       |                  说明                   |              类型             |   默认值   |
 | :-------------: | :------------------------------------: | :--------------------------: | :--------: |
 |       value     |                转换的时间                |          number,Date         |      -     |
-|       limit     | 最大限制的时间戳，超过这个时间戳就返回绝对时间 |             number           | `94694400` |
+|       limit     | 最大限制的时间戳，超过这个时间戳就返回绝对时间  |             number           | `94694400` |
 |   compareDate   |               传入被比较时间              |    string, number, Date     |      -     |
 |   weekStartsOn  |        每周起始日期的index，0为周日        |     0, 1, 2, 3, 4, 5, 6     |     `1`    |
