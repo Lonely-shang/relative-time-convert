@@ -1,4 +1,4 @@
-import {
+const {
   startOfYear,
   differenceInYears,
   startOfMonth,
@@ -10,9 +10,8 @@ import {
   differenceInHours,
   differenceInMinutes,
   differenceInSeconds,
-} from 'date-fns';
+} =  require('date-fns');
 
-type Num = 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
 interface IComputedDate {
   diffYears:() => number;
   absDiffYears:() => number;
@@ -30,13 +29,13 @@ interface IComputedDate {
   absDiffSeconds: ()=> number;
 }
 
-export default class ComputedDate implements IComputedDate{
+module.exports.default = class ComputedDate implements IComputedDate{
 
   private now: Date | number;
   private value: number | Date;
-  private weekStartsOn: Num;
+  private weekStartsOn: WeekStart;
 
-  constructor(value: number | Date, weekStartsOn: Num = 1, compareDate?: string | number ){
+  constructor(value: number | Date, weekStartsOn: WeekStart = 1, compareDate?: string | number ){
     this.value = value;
     this.weekStartsOn = weekStartsOn;
     this.now = compareDate ? new Date(compareDate) : Date.now();
