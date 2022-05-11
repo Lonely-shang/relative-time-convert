@@ -1,7 +1,7 @@
 /*
  * @Author: Eliauk
  * @Date: 2021-11-19 15:12:28
- * @LastEditTime: 2021-11-24 17:04:49
+ * @LastEditTime: 2022-05-11 21:56:36
  * @LastEditors: Eliauk
  * @Description: 
  * @FilePath: /relative-time-convert/src/__test__/index.test.ts
@@ -39,10 +39,7 @@ describe('测试周时间转换', () => {
   test('>7天生成下周', () => {
     expect(relativeTime(`${year}-${month}-${day + 7}`)).toBe('下周')
   })
-
-  test('>14天生成几周前/后', () => {
-    expect(relativeTime(`${year}-${month}-${day - 14}`)).toBe('2周前')
-  })
+  
 })
 
 describe('测试月时间转换', () => {
