@@ -20,12 +20,12 @@
   "author": "Miliky<miliky0906@foxmail.com>",
   "license": "MIT",
   "dependencies": {
-    "date-fns": "^2.25.0",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.5.2"
+    "date-fns": "^2.25.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.3"
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2",
+    "@types/jest": "^27.5.0"
   }
 }

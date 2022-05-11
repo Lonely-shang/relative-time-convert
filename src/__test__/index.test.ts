@@ -40,9 +40,6 @@ describe('测试周时间转换', () => {
     expect(relativeTime(`${year}-${month}-${day + 7}`)).toBe('下周')
   })
 
-  test('>14天生成几周前/后', () => {
-    expect(relativeTime(`${year}-${month}-${day - 14}`)).toBe('2周前')
-  })
 })
 
 describe('测试月时间转换', () => {
