@@ -1,28 +1,37 @@
 
 import typescript from "@rollup/plugin-typescript";
 import sourceMaps from "rollup-plugin-sourcemaps";
-import resolve from "@rollup/plugin-node-resolve";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import replace from "@rollup/plugin-replace";
+import { terser } from "rollup-plugin-terser";
+import cleanup from "rollup-plugin-cleanup";
+
 
 export default {
-  input: "./src/index.ts",
+  input: "./src/relativeTimeConvert.ts",
   plugins: [
-    replace({
-      "process.env.NODE_ENV": JSON.stringify("development"),
-      "process.env.VUE_ENV": JSON.stringify("browser"),
-      "process.env.LANGUAGE": JSON.stringify(process.env.LANGUAGE),
+    nodeResolve({
+      jsnext: true,
+      main: true,
+      browser: true,
     }),
-    resolve(),
     commonjs(),
     typescript(),
     sourceMaps(),
+    terser(),
+    cleanup(),
   ],
   output: [
     {
       format: "cjs",
-      dir: "dist",
+      file: 'dist/relativeTimeConvert.cjs.js',
       sourcemap: true,
-    }
+    },
+    {
+      name: "relativeTimeConvert",
+      format: "es",
+      file: 'dist/relativeTimeConvert.esm.js',
+      sourcemap: true,
+    },
   ],
 };
