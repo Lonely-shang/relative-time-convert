@@ -1,4 +1,4 @@
-const {
+import {
   startOfYear,
   differenceInYears,
   startOfMonth,
@@ -10,7 +10,7 @@ const {
   differenceInHours,
   differenceInMinutes,
   differenceInSeconds,
-} =  require('date-fns');
+} from 'date-fns';
 
 interface IComputedDate {
   diffYears:() => number;
@@ -29,7 +29,7 @@ interface IComputedDate {
   absDiffSeconds: ()=> number;
 }
 
-module.exports.default = class ComputedDate implements IComputedDate{
+export default class ComputedDate implements IComputedDate{
 
   private now: Date | number;
   private value: number | Date;
@@ -92,7 +92,6 @@ module.exports.default = class ComputedDate implements IComputedDate{
   }
 
   diffSeconds () {
-    console.log(differenceInSeconds(1629388800000, 1534694400000))
     return differenceInSeconds(this.now, this.value);
   }
   absDiffSeconds () {

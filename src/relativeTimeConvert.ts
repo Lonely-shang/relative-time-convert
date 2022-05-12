@@ -1,5 +1,5 @@
-const ComputedDate = require('./computedDate');
-const relativeTimeText = require('./zh-cn');
+import ComputedDate from './computedDate';
+import relativeTimeText  from './zh-cn';
 
 /**
  *
@@ -9,7 +9,7 @@ const relativeTimeText = require('./zh-cn');
  * @param weekStartsOn 非必选，每周起始日期的index，0为周日
  * @returns 返回相对时间
  */
-exports  = function relativeTimeConvert(
+export default function relativeTimeConvert(
   value: number | Date | string,
   limit: number = 94694400,
   compareDate?: number | string,

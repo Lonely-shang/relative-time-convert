@@ -1,4 +1,4 @@
-module.exports.default = {
+export default {
   yearsAgo(num: number) {
     return num === 1 ? '去年' : `${num}年前`;
   },
