@@ -12,7 +12,6 @@ import {
   differenceInSeconds,
 } from 'date-fns';
 
-type Num = 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
 interface IComputedDate {
   diffYears:() => number;
   absDiffYears:() => number;
@@ -34,9 +33,9 @@ export default class ComputedDate implements IComputedDate{
 
   private now: Date | number;
   private value: number | Date;
-  private weekStartsOn: Num;
+  private weekStartsOn: WeekStart;
 
-  constructor(value: number | Date, weekStartsOn: Num = 1, compareDate?: string | number ){
+  constructor(value: number | Date, weekStartsOn: WeekStart = 1, compareDate?: string | number ){
     this.value = value;
     this.weekStartsOn = weekStartsOn;
     this.now = compareDate ? new Date(compareDate) : Date.now();
@@ -93,7 +92,6 @@ export default class ComputedDate implements IComputedDate{
   }
 
   diffSeconds () {
-    console.log(differenceInSeconds(1629388800000, 1534694400000))
     return differenceInSeconds(this.now, this.value);
   }
   absDiffSeconds () {

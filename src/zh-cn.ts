@@ -1,4 +1,4 @@
-const relativeTimeText = {
+export default {
   yearsAgo(num: number) {
     return num === 1 ? '去年' : `${num}年前`;
   },
@@ -30,5 +30,3 @@ const relativeTimeText = {
   minutesLater: '分钟后',
   hoursLater: '小时后',
 }
-
-export default relativeTimeText;
