@@ -2,8 +2,8 @@
 人性化时间转换
 
 ```javascript
-  import relativeTime from 'relative-time-convert'
-  let count = relativeTime(new Date('2021/11/11'))
+  const relativeTimeConvert = require('relative-time-convert');
+  let count = relativeTimeConvert(new Date('2021/11/11'))
 ```
 
 转换规则
